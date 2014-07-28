@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <PreferenceCategory 
+        android:title="@string/power" >
+        <Preference
+            android:title="@string/power_shutdown"
+            android:summary="@string/power_shutdown_summary"
+            android:key="power_shutdown" >
+        </Preference>
+        <Preference
+            android:title="@string/power_reboot"
+            android:summary="@string/power_reboot_summary"
+            android:key="power_reboot" >
+        </Preference>
+        <Preference
+            android:title="@string/power_reboot_recovery"
+            android:summary="@string/power_reboot_recovery_summary"
+            android:key="power_reboot_recovery" >
+        </Preference>
+        <Preference 
+            android:title="@string/power_reboot_bootloader"
+            android:summary="@string/power_reboot_bootloader_summary"
+            android:key="power_reboot_bootloader" >
+        </Preference>
+    </PreferenceCategory>
+    
+    <PreferenceCategory 
+        android:title="@string/flash_rom" >
+        <Preference
+            android:title="@string/flash_color_recovery"
+            android:summary="@string/flash_color_recovery_summary"
+            android:key="flash_color_recovery" >
+        </Preference>
+        <Preference
+            android:title="@string/flash_other_recovery"
+            android:summary="@string/flash_other_recovery_summary"
+            android:key="flash_other_recovery">
+        </Preference>
+    </PreferenceCategory>
+        
+    
+    <PreferenceCategory 
+        android:title="@string/modem" >
+        <Preference
+            android:title="@string/modem_settings"
+            android:summary="@string/modem_settings_summary" >
+            <intent 
+                android:targetPackage="com.android.settings" 
+                android:action="android.intent.action.MAIN" 
+                android:targetClass="com.android.settings.RadioInfo" />
+        </Preference>
+        <Preference
+            android:title="@string/flash_chinamobile"
+            android:summary="@string/flash_chinamobile_summary"
+            android:key="flash_chinamobile" >
+        </Preference>
+        <Preference
+            android:title="@string/flash_chinaunicom"
+            android:summary="@string/flash_chinaunicom_summary"
+            android:key="flash_chinaunicom" >
+        </Preference>
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:title="@string/about" >
+        <Preference
+            android:title="@string/version"
+            android:summary="@string/version_summary"
+            android:enabled="false" >
+        </Preference>
+    </PreferenceCategory>
+        
+</PreferenceScreen>

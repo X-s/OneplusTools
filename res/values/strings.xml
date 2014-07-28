@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Oneplus Tools</string>
+    <string name="modem">Modem</string>
+    <string name="flash_chinaunicom">Flash China Unicom Modem</string>
+    <string name="flash_chinaunicom_summary"></string>
+    <string name="flash_chinamobile">Flash China Mobile Modem</string>
+    <string name="flash_chinamobile_summary"></string>
+    <string name="modem_settings">Modem Settings</string>
+    <string name="modem_settings_summary"></string>
+    <string name="about">About</string>
+    <string name="version">Oneplus Tools 1.0</string>
+    <string name="version_summary">Copyright 2014 by 879248578@qq.com</string>
+    <string name="confirm">Confirm？</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="power">Power</string>
+    <string name="power_shutdown">Shutdown</string>
+    <string name="power_shutdown_summary"></string>
+    <string name="power_reboot">Reboot</string>
+    <string name="power_reboot_summary"></string>
+    <string name="power_reboot_recovery">Recovery</string>
+    <string name="power_reboot_recovery_summary"></string>
+    <string name="power_reboot_bootloader">Fastboot</string>
+    <string name="power_reboot_bootloader_summary"></string>
+    <string name="flash_rom">Flash Rom</string>
+    <string name="flash_color_recovery">Flash Color Recovery</string>
+    <string name="flash_color_recovery_summary"></string>
+    <string name="flash_other_recovery">Flash Other Recovery</string>
+    <string name="flash_other_recovery_summary">Move your recovery to "recovery.img" on the sdcard</string>
+    
+</resources>
