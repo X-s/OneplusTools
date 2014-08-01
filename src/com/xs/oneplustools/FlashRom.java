@@ -3,6 +3,8 @@ package com.xs.oneplustools;
 import java.io.File;
 import android.content.Context;
 
+// FlashRom类，实现自动刷ZIP文件功能
+
 public class FlashRom {
 	private static File recoveryDir = new File("/cache/recovery");
 	private static File command = new File(recoveryDir, "command");

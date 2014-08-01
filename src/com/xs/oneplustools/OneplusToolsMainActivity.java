@@ -2,51 +2,39 @@ package com.xs.oneplustools;
 
 import java.io.IOException;
 
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.os.Bundle;
-import android.preference.Preference;
-import android.preference.PreferenceActivity;
-import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceManager;
-import android.preference.PreferenceScreen;
-import android.widget.Toast;
+import android.app.ActivityGroup;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
+import android.view.GestureDetector;
+import android.view.GestureDetector.SimpleOnGestureListener;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.Window;
+import android.widget.TabHost;
+import android.widget.Toast;
 
-public class OneplusToolsMainActivity extends PreferenceActivity implements
-		OnPreferenceChangeListener {
-
-	private static final String FLASH_CHINAMOBILE = "flash_chinamobile";
-	private static final String FLASH_CHINAUNICOM = "flash_chinaunicom";
-	private static final String POWER_SHUTDOWN = "power_shutdown";
-	private static final String POWER_REBOOT = "power_reboot";
-	private static final String POWER_REBOOT_RECOVERY = "power_reboot_recovery";
-	private static final String POWER_REBOOT_BOOTLOADER = "power_reboot_bootloader";
-	private static final String FLASH_COLOR_RECOVERY = "flash_color_recovery";
-	private static final String FLASH_OTHER_RECOVERY = "flash_other_recovery";
-
-	private Preference mFlashChinaMobile;
-	private Preference mFlashChinaUnicom;
-	private Preference mPowerShutdown;
-	private Preference mPowerReboot;
-	private Preference mPowerRebootRecovery;
-	private Preference mPowerRebootBootloader;
-	private Preference mFlashColorRecovery;
-	private Preference mFlashOtherRecovery;
+//¸ÃÀàĞèÒª¼Ì³ĞActivityGroup
+public class OneplusToolsMainActivity extends ActivityGroup {
+	private TabHost mTabHost;
 
 	protected void onCreate(Bundle savedInstanceState) {
-
 		super.onCreate(savedInstanceState);
+
+		// ´æ´¢PreferenceÖµ
 		SharedPreferences prefs = PreferenceManager
 				.getDefaultSharedPreferences(getBaseContext());
-		addPreferencesFromResource(R.xml.oneplustools);
 
-		Toast.makeText(getApplicationContext(),
-				"æ¬¢è¿ä½¿ç”¨ä¸€åŠ å·¥å…·ç®±ï¼Œä½œè€…XS\nå¾®åšåœ°å€ï¼šweibo.com/acexs\näº¤æµç¾¤ï¼š333932217",
+		// ²¼¾Ö
+		setContentView(R.layout.tab_host_activity);
+
+		// »¶Ó­
+		Toast.makeText(getApplicationContext(), R.string.welcome,
 				Toast.LENGTH_SHORT).show();
 
-		// ç¨‹åºå¯åŠ¨æ—¶å¤åˆ¶assetsæ•°æ®åˆ°SDå¡
+		// ÔÚ³ÌĞòÆô¶¯Ê±¸´ÖÆÊı¾İµ½SD¿¨
 		AssetCopyer asset = new AssetCopyer(getBaseContext());
 		try {
 			asset.copy();
@@ -55,127 +43,56 @@ public class OneplusToolsMainActivity extends PreferenceActivity implements
 			e.printStackTrace();
 		}
 
-		mFlashChinaMobile = (Preference) findPreference(FLASH_CHINAMOBILE);
-		mFlashChinaUnicom = (Preference) findPreference(FLASH_CHINAUNICOM);
-		mPowerShutdown = (Preference) findPreference(POWER_SHUTDOWN);
-		mPowerReboot = (Preference) findPreference(POWER_REBOOT);
-		mPowerRebootRecovery = (Preference) findPreference(POWER_REBOOT_RECOVERY);
-		mPowerRebootBootloader = (Preference) findPreference(POWER_REBOOT_BOOTLOADER);
-		mFlashColorRecovery = (Preference) findPreference(FLASH_COLOR_RECOVERY);
-		mFlashOtherRecovery = (Preference) findPreference(FLASH_OTHER_RECOVERY);
+		// ´´½¨³ÌĞòÄ¿Â¼
+		RootCmd.RunRootCmd("mkdir /sdcard/OneplusTools/");
+		RootCmd.RunRootCmd("mkdir /sdcard/OneplusTools/Backup/");
+		RootCmd.RunRootCmd("mkdir /sdcard/OneplusTools/Flash/");
+
+		// ÉèÖÃTabHost
+		initTabs();
 	}
 
-	public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
-			Preference preference) {
-		if (preference == mFlashOtherRecovery) {
-			new AlertDialog.Builder(OneplusToolsMainActivity.this)
-					.setTitle(R.string.confirm)
-					.setMessage("æ‚¨ç¡®å®šåˆ·å…¥ç¬¬ä¸‰æ–¹Recoveryï¼Ÿ")
-					.setNegativeButton(R.string.yes,
-							new DialogInterface.OnClickListener() {
-								public void onClick(DialogInterface dialog,
-										int whichButton) {
-									RootCmd.RunRootCmd("dd if=/sdcard/recovery.img of=/dev/block/platform/msm_sdcc.1/by-name/recovery");
-									RootCmd.RunRootCmd("reboot recovery");
-								}
-							}).setPositiveButton(R.string.no, null).show();
-		}
-		if (preference == mFlashColorRecovery) {
-			new AlertDialog.Builder(OneplusToolsMainActivity.this)
-					.setTitle(R.string.confirm)
-					.setMessage("æ‚¨ç¡®å®šåˆ·å…¥å®˜æ–¹Recoveryï¼Ÿ")
-					.setNegativeButton(R.string.yes,
-							new DialogInterface.OnClickListener() {
-								public void onClick(DialogInterface dialog,
-										int whichButton) {
-									RootCmd.RunRootCmd("dd if=/sdcard/Android/data/com.xs.oneplustools/files/color-recovery.img of=/dev/block/platform/msm_sdcc.1/by-name/recovery");
-									RootCmd.RunRootCmd("reboot recovery");
-								}
-							}).setPositiveButton(R.string.no, null).show();
-		}
-		if (preference == mPowerShutdown) {
-			new AlertDialog.Builder(OneplusToolsMainActivity.this)
-					.setTitle(R.string.confirm)
-					.setMessage("æ‚¨ç¡®å®šå…³é—­æ‰‹æœºï¼Ÿ")
-					.setNegativeButton(R.string.yes,
-							new DialogInterface.OnClickListener() {
-								public void onClick(DialogInterface dialog,
-										int whichButton) {
-									RootCmd.RunRootCmd("poweroff");
-								}
-							}).setPositiveButton(R.string.no, null).show();
-		}
-		if (preference == mPowerReboot) {
-			new AlertDialog.Builder(OneplusToolsMainActivity.this)
-					.setTitle(R.string.confirm)
-					.setMessage("æ‚¨ç¡®å®šé‡å¯æ‰‹æœºï¼Ÿ")
-					.setNegativeButton(R.string.yes,
-							new DialogInterface.OnClickListener() {
-								public void onClick(DialogInterface dialog,
-										int whichButton) {
-									RootCmd.RunRootCmd("reboot");
-								}
-							}).setPositiveButton(R.string.no, null).show();
-		}
-		if (preference == mPowerRebootRecovery) {
-			new AlertDialog.Builder(OneplusToolsMainActivity.this)
-					.setTitle(R.string.confirm)
-					.setMessage("æ‚¨ç¡®å®šé‡å¯è¿›å…¥æ¢å¤æ¨¡å¼ï¼Ÿ")
-					.setNegativeButton(R.string.yes,
-							new DialogInterface.OnClickListener() {
-								public void onClick(DialogInterface dialog,
-										int whichButton) {
-									RootCmd.RunRootCmd("reboot recovery");
-								}
-							}).setPositiveButton(R.string.no, null).show();
-		}
-		if (preference == mPowerRebootBootloader) {
-			new AlertDialog.Builder(OneplusToolsMainActivity.this)
-					.setTitle(R.string.confirm)
-					.setMessage("æ‚¨ç¡®å®šé‡å¯è¿›å…¥Fastbootæ¨¡å¼ï¼Ÿ")
-					.setNegativeButton(R.string.yes,
-							new DialogInterface.OnClickListener() {
-								public void onClick(DialogInterface dialog,
-										int whichButton) {
-									RootCmd.RunRootCmd("reboot bootloader");
-								}
-							}).setPositiveButton(R.string.no, null).show();
-		}
-		if (preference == mFlashChinaMobile) {
-			new AlertDialog.Builder(OneplusToolsMainActivity.this)
-					.setTitle(R.string.confirm)
-					.setMessage("æ‚¨ç¡®å®šåˆ·å…¥ç§»åŠ¨ä¿¡å·åŸºå¸¦ä¹ˆï¼Œè¿™å°†ä¼šé‡å¯æ‰‹æœºï¼Ÿ")
-					.setNegativeButton(R.string.yes,
-							new DialogInterface.OnClickListener() {
-								public void onClick(DialogInterface dialog,
-										int whichButton) {
-									FlashRom.flashRom(
-											getApplicationContext(),
-											"/sdcard/Android/data/com.xs.oneplustools/files/Oneplus One ChinaMobile 3G$4G.zip");
-								}
-							}).setPositiveButton(R.string.no, null).show();
-		}
-		if (preference == mFlashChinaUnicom) {
-			new AlertDialog.Builder(OneplusToolsMainActivity.this)
-					.setTitle(R.string.confirm)
-					.setMessage("æ‚¨ç¡®å®šåˆ·å…¥è”é€šä¿¡å·åŸºå¸¦ä¹ˆï¼Œè¿™å°†ä¼šé‡å¯æ‰‹æœºï¼Ÿ")
-					.setNegativeButton(R.string.yes,
-							new DialogInterface.OnClickListener() {
-								public void onClick(DialogInterface dialog,
-										int whichButton) {
-									FlashRom.flashRom(
-											getApplicationContext(),
-											"/sdcard/Android/data/com.xs.oneplustools/files/Oneplus One ChinaUnicom 3G$4G.zip");
-								}
-							}).setPositiveButton(R.string.no, null).show();
-		}
-		return false;
-	}
+	// ÉèÖÃTabÁĞ±í
+	private void initTabs() {
+		mTabHost = (TabHost) findViewById(R.id.tabhost);
+		mTabHost.setup(this.getLocalActivityManager());
 
-	@Override
-	public boolean onPreferenceChange(Preference arg0, Object arg1) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+		// ¹ØÓÚ
+		mTabHost.addTab(mTabHost
+				.newTabSpec("tab_about")
+				.setIndicator("¹ØÓÚ",
+						getResources().getDrawable(R.drawable.ic_launcher))
+				.setContent(new Intent(this, AboutActivity.class)));
 
+		// µçÔ´
+		mTabHost.addTab(mTabHost
+				.newTabSpec("tab_power")
+				.setIndicator("µçÔ´",
+						getResources().getDrawable(R.drawable.ic_launcher))
+				.setContent(new Intent(this, PowerActivity.class)));
+
+		// ÉùÒô
+		mTabHost.addTab(mTabHost
+				.newTabSpec("tab_sound")
+				.setIndicator("ÉùÒô",
+						getResources().getDrawable(R.drawable.ic_launcher))
+				.setContent(new Intent(this, SoundActivity.class)));
+
+		// ÍøÂç
+		mTabHost.addTab(mTabHost
+				.newTabSpec("tab_modem")
+				.setIndicator("ÍøÂç",
+						getResources().getDrawable(R.drawable.ic_launcher))
+				.setContent(new Intent(this, ModemActivity.class)));
+
+		// Ë¢»ú
+		mTabHost.addTab(mTabHost
+				.newTabSpec("tab_flash")
+				.setIndicator("Ë¢»ú",
+						getResources().getDrawable(R.drawable.ic_launcher))
+				.setContent(new Intent(this, FlashRomActivity.class)));
+
+		// ³ÌĞòÆô¶¯Ê±Ê×Tab
+		mTabHost.setCurrentTab(0);
+	}
 }

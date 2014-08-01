@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceScreen
+        android:summary="@string/author_summary"
+        android:title="@string/author" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://weibo.com/acexs" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:summary="@string/changelog_summary"
+        android:title="@string/changelog" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://www.imxs.name/post/2da397_18f1344" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:enabled="false"
+        android:summary="@string/version_summary"
+        android:title="@string/version" >
+    </PreferenceScreen>
+
+</PreferenceScreen>

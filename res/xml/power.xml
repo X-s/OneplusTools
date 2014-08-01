@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/power" >
+        <PreferenceScreen
+            android:key="power_shutdown"
+            android:summary="@string/power_shutdown_summary"
+            android:title="@string/power_shutdown" >
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="power_reboot"
+            android:summary="@string/power_reboot_summary"
+            android:title="@string/power_reboot" >
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="power_reboot_recovery"
+            android:summary="@string/power_reboot_recovery_summary"
+            android:title="@string/power_reboot_recovery" >
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="power_reboot_bootloader"
+            android:summary="@string/power_reboot_bootloader_summary"
+            android:title="@string/power_reboot_bootloader" >
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -40,22 +40,27 @@ public class AssetCopyer {
 		List<String> srcFiles = new ArrayList<String>();
 
 		// 获取系统在SDCard中为app分配的目录，eg:/sdcard/Android/data/$(app's package)
+
 		// 该目录存放app相关的各种文件(如cache，配置文件等)，unstall app后该目录也会随之删除
+
 		mAppDirectory = mContext.getExternalFilesDir(null);
 		if (null == mAppDirectory) {
 			return false;
 		}
 
 		// 读取assets/$(subDirectory)目录下的assets.lst文件，得到需要copy的文件列表
+
 		List<String> assets = getAssetsList();
 		for (String asset : assets) {
 			// 如果不存在，则添加到copy列表
+
 			if (!new File(mAppDirectory, asset).exists()) {
 				srcFiles.add(asset);
 			}
 		}
 
 		// 依次拷贝到App的安装目录下
+
 		for (String file : srcFiles) {
 			copy(file);
 		}

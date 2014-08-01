@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/modem" >
+        <PreferenceScreen
+            android:summary="@string/modem_settings_summary"
+            android:title="@string/modem_settings" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.android.settings.RadioInfo"
+                android:targetPackage="com.android.settings" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="flash_chinamobile"
+            android:summary="@string/flash_chinamobile_summary"
+            android:title="@string/flash_chinamobile" >
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="flash_chinaunicom"
+            android:summary="@string/flash_chinaunicom_summary"
+            android:title="@string/flash_chinaunicom" >
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>

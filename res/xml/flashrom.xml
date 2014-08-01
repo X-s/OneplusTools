@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/flash_rom" >
+        <PreferenceScreen 
+            android:summary="@string/flash_boot_summary"
+            android:title="@string/flash_boot"
+            android:key="flash_boot" >
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="flash_color_recovery"
+            android:summary="@string/flash_color_recovery_summary"
+            android:title="@string/flash_color_recovery" >
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="flash_other_recovery"
+            android:summary="@string/flash_other_recovery_summary"
+            android:title="@string/flash_other_recovery" >
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/flash_backup" >
+        <PreferenceScreen 
+            android:title="@string/flash_backup_boot"
+            android:key="flash_backup_boot"
+            android:summary="@string/flash_backup_boot_summary">
+        </PreferenceScreen>
+                <PreferenceScreen
+            android:key="flash_backup_modem"
+            android:summary="@string/flash_backup_modem_summary"
+            android:title="@string/flash_backup_modem" >
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="flash_backup_recovery"
+            android:summary="@string/flash_backup_recovery_summary"
+            android:title="@string/flash_backup_recovery" >
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

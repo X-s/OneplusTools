@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/camera" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="camera_sound"
+            android:summaryOff="@string/camera_sound_summary_off"
+            android:summaryOn="@string/camera_sound_summary_on"
+            android:title="@string/camera_sound" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="record_sound"
+            android:summaryOff="@string/record_sound_summary_off"
+            android:summaryOn="@string/record_sound_summary_on"
+            android:title="@string/record_sound" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="focus_sound"
+            android:summaryOff="@string/focus_sound_summary_off"
+            android:summaryOn="@string/focus_sound_summary_on"
+            android:title="@string/focus_sound" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

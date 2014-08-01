@@ -1,7 +1,11 @@
 package com.xs.oneplustools;
 
 import java.io.DataOutputStream;
+
 import android.util.Log;
+
+//RootCmd Shell√¸¡Ó
+//RootCmd.RunRootCmd("shell");
 
 public class RootCmd {
 	private static final String LOG_TAG = "OneplusTools";
@@ -19,9 +23,11 @@ public class RootCmd {
 			localDataOutputStream.flush();
 			localProcess.waitFor();
 			return localProcess.exitValue();
+
 		} catch (Exception localException) {
 			localException.printStackTrace();
 		}
 		return 1;
+
 	}
 }
