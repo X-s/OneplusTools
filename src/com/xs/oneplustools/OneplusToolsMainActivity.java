@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 //该类需要继承ActivityGroup
 public class OneplusToolsMainActivity extends ActivityGroup {
+		
 	private TabHost mTabHost;
 
 	protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +92,13 @@ public class OneplusToolsMainActivity extends ActivityGroup {
 				.setIndicator("刷机",
 						getResources().getDrawable(R.drawable.ic_launcher))
 				.setContent(new Intent(this, FlashRomActivity.class)));
+		
+		//手势
+		mTabHost.addTab(mTabHost
+				.newTabSpec("tab_gesture")
+				.setIndicator("手势",
+						getResources().getDrawable(R.drawable.ic_launcher))
+				.setContent(new Intent(this, GestureActivity.class)));
 
 		// 程序启动时首Tab
 		mTabHost.setCurrentTab(0);

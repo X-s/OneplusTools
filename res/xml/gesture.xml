@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory 
+        android:title="@string/gesture" >
+        
+        <CheckBoxPreference
+            android:summaryOff="@string/double_tap_to_wake_summary_off"
+            android:summaryOn="@string/double_tap_to_wake_summary_on"
+            android:key="double_tap_to_wake"
+            android:title="@string/double_tap_to_wake" >
+        </CheckBoxPreference>
+        
+        <CheckBoxPreference
+            android:summaryOff="@string/camera_gesture_summary_off"
+            android:summaryOn="@string/camera_gesture_summary_on"
+            android:key="camera_gesture"
+            android:title="@string/camera_gesture" >
+        </CheckBoxPreference>
+        
+        <CheckBoxPreference
+            android:summaryOff="@string/music_gesture_summary_off"
+            android:summaryOn="@string/music_gesture_summary_on"
+            android:key="music_gesture"
+            android:title="@string/music_gesture" >
+        </CheckBoxPreference>
+        
+    </PreferenceCategory>
+
+</PreferenceScreen>

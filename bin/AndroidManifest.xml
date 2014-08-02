@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xs.oneplustools"
     android:versionCode="1"
-    android:versionName="1.1" >
+    android:versionName="1.2" >
 
     <uses-permission android:name="android.permission.ACCESS_SUPERUSER" ></uses-permission>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" ></uses-permission>
@@ -55,6 +55,10 @@
         
         <activity
             android:name=".AboutActivity">
+        </activity>
+        
+        <activity
+            android:name=".GestureActivity">
         </activity>
         
     </application>

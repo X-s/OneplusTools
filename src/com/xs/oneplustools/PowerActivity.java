@@ -41,6 +41,7 @@ public class PowerActivity extends PreferenceActivity {
 							new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,
 										int whichButton) {
+									RootCmd.RunRootCmd("reboot -p");
 									RootCmd.RunRootCmd("poweroff");
 								}
 							}).setPositiveButton(R.string.no, null).show();

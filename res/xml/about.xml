@@ -8,6 +8,7 @@
             android:action="android.intent.action.VIEW"
             android:data="http://weibo.com/acexs" />
     </PreferenceScreen>
+    
     <PreferenceScreen
         android:summary="@string/changelog_summary"
         android:title="@string/changelog" >
@@ -15,6 +16,13 @@
             android:action="android.intent.action.VIEW"
             android:data="http://www.imxs.name/post/2da397_18f1344" />
     </PreferenceScreen>
+    
+    <PreferenceScreen
+        android:enabled="false"
+        android:title="@string/qq_group"
+        android:summary="@string/qq_group_summary" >
+    </PreferenceScreen>
+    
     <PreferenceScreen
         android:enabled="false"
         android:summary="@string/version_summary"

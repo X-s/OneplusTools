@@ -10,7 +10,7 @@
     <string name="modem_settings">信号选择</string>
     <string name="modem_settings_summary">设置首选网络类型</string>
     <string name="about">程序信息</string>
-    <string name="version">一加手机工具箱 1.1</string>
+    <string name="version">一加手机工具箱 1.2</string>
     <string name="version_summary">© Oneplus Tools | Powered by Xs</string>
     <string name="confirm">确认？</string>
     <string name="yes">确定</string>
@@ -31,7 +31,7 @@
     <string name="flash_color_recovery_summary">官方Recovery方便升级Color OS，但是不可刷入第三方系统如CM，MIUI等</string>
     <string name="flash_other_recovery">刷入第三方Recovery</string>
     <string name="flash_other_recovery_summary">将需要刷入的Recovery改名为recovery.img并放置在SD卡的OneplusTools/Flash目录，然后点击刷入</string>
-    <string name="welcome">欢迎使用一加手机工具箱，作者XS\n微博地址：weibo.com/acexs\n交流群：333932217</string>
+    <string name="welcome">欢迎使用一加手机工具箱</string>
     <string name="sound">声音</string>
     <string name="flash_backup">备份</string>
     <string name="flash_backup_ok">备份成功</string>
@@ -54,6 +54,18 @@
     <string name="author">Xs</string>
     <string name="author_summary">点击访问我的微博</string>
     <string name="changelog">更新日志</string>
-    <string name="changelog_summary">点击查看程序更新日志</string>
+    <string name="changelog_summary">查看更新日志</string>
+    <string name="qq_group">QQ交流群</string>
+    <string name="qq_group_summary">333932217</string>
+    <string name="gesture">黑屏手势</string>
+    <string name="double_tap_to_wake">双击唤醒</string>
+    <string name="double_tap_to_wake_summary_off">已关闭！</string>
+    <string name="double_tap_to_wake_summary_on">已开启！</string>
+    <string name="camera_gesture">圆圈打开相机</string>
+    <string name="camera_gesture_summary_off">已关闭！</string>
+    <string name="camera_gesture_summary_on">已开启！</string>
+    <string name="music_gesture">双竖线播放/暂停音乐</string>
+    <string name="music_gesture_summary_off">已关闭！</string>
+    <string name="music_gesture_summary_on">已开启！</string>
 
 </resources>
