@@ -21,6 +21,9 @@ public class GestureActivity extends PreferenceActivity {
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.gesture);
 		
+		Toast.makeText(getApplicationContext(), "当您重启系统时，手势开关可能失效，重新设置一次即可",
+				Toast.LENGTH_SHORT).show();
+		
 		mDoubleTapToWake = (CheckBoxPreference) findPreference(DOUBLE_TAP_TO_WAKE);
 		mCameraGesture = (CheckBoxPreference) findPreference(CAMERA_GESTURE);
 		mMusicGesture = (CheckBoxPreference) findPreference(MUSIC_GESTURE);

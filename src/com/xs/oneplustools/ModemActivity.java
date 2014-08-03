@@ -36,7 +36,7 @@ public class ModemActivity extends PreferenceActivity {
 										int whichButton) {
 									FlashRom.flashRom(
 											getApplicationContext(),
-											"/sdcard/Android/data/com.xs.oneplustools/files/Oneplus One ChinaGeneral 2G&3G&4G.zip");
+											"/sdcard/Android/data/com.xs.oneplustools/files/Oneplus One ChinaMobile.zip");
 								}
 							}).setPositiveButton(R.string.no, null).show();
 		}
@@ -50,7 +50,7 @@ public class ModemActivity extends PreferenceActivity {
 										int whichButton) {
 									FlashRom.flashRom(
 											getApplicationContext(),
-											"/sdcard/Android/data/com.xs.oneplustools/files/Oneplus One ChinaGeneral 2G&3G&4G.zip");
+											"/sdcard/Android/data/com.xs.oneplustools/files/Oneplus One ChinaUnicom.zip");
 								}
 							}).setPositiveButton(R.string.no, null).show();
 		}
