@@ -35,39 +35,40 @@
         
         <!-- 主界面 -->
         <activity
-            android:name=".OneplusToolsMainActivity" >
+            android:name=".OneplusToolsMain" >
         </activity>
         
         <activity 
-            android:name=".PowerActivity" >
+            android:name=".activity.PowerActivity" >
         </activity>
         
         <activity 
-            android:name=".ModemActivity">
+            android:name=".activity.ModemActivity">
         </activity>
         
         <activity
-            android:name=".FlashRomActivity">
+            android:name=".activity.FlashRomActivity">
         </activity>
         
         <activity
-            android:name=".SoundActivity">
+            android:name=".activity.SoundActivity">
         </activity>
         
         <activity
-            android:name=".AboutActivity">
+            android:name=".activity.AboutActivity">
         </activity>
         
         <activity
-            android:name=".GestureActivity">
+            android:name=".activity.GestureActivity">
         </activity>
         
         <activity
-            android:name=".ChangeLogActivity">
+            android:name=".activity.ChangeLogActivity">
         </activity>
         
+        <!-- 系统开机时恢复手势数据 -->
         <receiver
-            android:name=".StartUp">
+            android:name=".RestoreGesture">
             <intent-filter android:priority = "0" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>

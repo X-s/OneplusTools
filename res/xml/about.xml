@@ -13,7 +13,7 @@
         android:title="@string/changelog" >
         <intent
             android:targetPackage="com.xs.oneplustools"
-            android:targetClass="com.xs.oneplustools.ChangeLogActivity" ></intent>
+            android:targetClass="com.xs.oneplustools.activity.ChangeLogActivity" ></intent>
     </PreferenceScreen>
     <PreferenceScreen
         android:enabled="false"

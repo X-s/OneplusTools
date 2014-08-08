@@ -35,7 +35,7 @@ public class PowerOnStart extends Activity {
 	}
 
 	private void startMainFunction() {
-		Intent intent = new Intent(this, OneplusToolsMainActivity.class);
+		Intent intent = new Intent(this, OneplusToolsMain.class);
 		this.startActivity(intent);
 		this.finish();
 	}
