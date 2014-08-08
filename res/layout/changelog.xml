@@ -1,0 +1,118 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="vertical"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="更新日志"
+            android:textColor="@color/text_white"
+            android:textSize="20dp" />
+<!--日志列表
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="version"
+            android:textColor="@color/text_warning"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="Log"/>
+-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="1.4(2014.08.08)"
+            android:textColor="@color/text_warning"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="1.修复 黑屏手势重启失效问题\n2.优化 全新的更新日志(无需联网)"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="1.3(2014.08.03)"
+            android:textColor="@color/text_warning"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="1.添加 手势，贴心小提醒\n2.修复 部分机器刷联通基带导致无限重启问题" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="v1.2(2014.08.02)"
+            android:textColor="@color/text_warning"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="1.新的欢迎界面\n2.添加 关于，QQ交流群\n3.添加 手势菜单（双击唤醒，圆圈相机，双竖线音乐），支持MIUI\n4.修复 电源，关机选项无法在Color OS上使用的问题\n5.优化 声音菜单执行效率" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="v1.1(2014.07.31)"
+            android:textColor="@color/text_warning"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="1.全新界面样式\n2.更换为通用基带\n3.补全软件所需权限\n4.添加 关于，更新日志\n5.添加 关于，访问微博\n6.添加 刷机，刷入内核功能\n7.添加 刷机，备份内核功能\n8.添加 刷机，备份基带功能\n9.添加 刷机，备份Recovery功能\n10.添加 声音，拍照声音（开启关闭）功能\n11.添加 声音，录像声音（开启关闭）功能\n12.添加 声音，对焦声音（开启关闭）功能" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="v1.0"
+            android:textColor="@color/text_warning"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="1.高级电源管理，方便重启各种模式\n2.一键还原官方Recovery和刷入任意第三方Recovery\n3.一键选择信号模式，移动和联通快速切换\n4.一键刷入移动，联通基带，无需电脑端操作" />
+    </LinearLayout>
+
+</ScrollView>

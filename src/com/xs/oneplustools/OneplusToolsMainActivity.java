@@ -7,24 +7,17 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
-import android.view.GestureDetector;
-import android.view.GestureDetector.SimpleOnGestureListener;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.Window;
 import android.widget.TabHost;
 import android.widget.Toast;
 
 //该类需要继承ActivityGroup
 public class OneplusToolsMainActivity extends ActivityGroup {
-		
 	private TabHost mTabHost;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		// 存储Preference值
+		// Preference值
 		SharedPreferences prefs = PreferenceManager
 				.getDefaultSharedPreferences(getBaseContext());
 

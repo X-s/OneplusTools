@@ -1,0 +1,4 @@
+<resources>
+    <color name="text_warning">#FFff8080</color>
+    <color name="text_white">#FFFFFFFF</color>
+</resources>

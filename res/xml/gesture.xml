@@ -25,6 +25,12 @@
             android:title="@string/music_gesture" >
         </CheckBoxPreference>
         
+        <PreferenceScreen 
+            android:title="@string/gesture_warning"
+            android:summary="@string/gesture_warning_summary"
+            android:enabled="false">
+        </PreferenceScreen>
+        
     </PreferenceCategory>
 
 </PreferenceScreen>

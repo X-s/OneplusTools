@@ -8,21 +8,18 @@
             android:action="android.intent.action.VIEW"
             android:data="http://weibo.com/acexs" />
     </PreferenceScreen>
-    
     <PreferenceScreen
         android:summary="@string/changelog_summary"
         android:title="@string/changelog" >
         <intent
-            android:action="android.intent.action.VIEW"
-            android:data="http://www.imxs.name/post/2da397_18f1344" />
+            android:targetPackage="com.xs.oneplustools"
+            android:targetClass="com.xs.oneplustools.ChangeLogActivity" ></intent>
     </PreferenceScreen>
-    
     <PreferenceScreen
         android:enabled="false"
-        android:title="@string/qq_group"
-        android:summary="@string/qq_group_summary" >
+        android:summary="@string/qq_group_summary"
+        android:title="@string/qq_group" >
     </PreferenceScreen>
-    
     <PreferenceScreen
         android:enabled="false"
         android:summary="@string/version_summary"
