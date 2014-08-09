@@ -19,7 +19,7 @@ public class PowerOnStart extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_power_on);
 
-		Toast.makeText(getApplicationContext(), "程序正在准备数据中...",
+		Toast.makeText(getApplicationContext(), R.string.loading,
 				Toast.LENGTH_SHORT).show();
 
 		new Timer().schedule(new MyTimerTask(), 1000);

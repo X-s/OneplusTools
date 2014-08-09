@@ -49,7 +49,7 @@ public class PowerActivity extends PreferenceActivity {
 		if (preference == mPowerShutdown) {
 			new AlertDialog.Builder(PowerActivity.this)
 					.setTitle(R.string.confirm)
-					.setMessage("您确定关闭手机？")
+					.setMessage(R.string.power_shutdown_confirm)
 					.setNegativeButton(R.string.yes,
 							new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,
@@ -62,7 +62,7 @@ public class PowerActivity extends PreferenceActivity {
 		if (preference == mPowerReboot) {
 			new AlertDialog.Builder(PowerActivity.this)
 					.setTitle(R.string.confirm)
-					.setMessage("您确定重启手机？")
+					.setMessage(R.string.power_reboot_confirm)
 					.setNegativeButton(R.string.yes,
 							new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,
@@ -74,7 +74,7 @@ public class PowerActivity extends PreferenceActivity {
 		if (preference == mPowerRebootRecovery) {
 			new AlertDialog.Builder(PowerActivity.this)
 					.setTitle(R.string.confirm)
-					.setMessage("您确定重启进入恢复模式？")
+					.setMessage(R.string.power_reboot_recovery_confirm)
 					.setNegativeButton(R.string.yes,
 							new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,
@@ -86,7 +86,7 @@ public class PowerActivity extends PreferenceActivity {
 		if (preference == mPowerRebootBootloader) {
 			new AlertDialog.Builder(PowerActivity.this)
 					.setTitle(R.string.confirm)
-					.setMessage("您确定重启进入Fastboot模式？")
+					.setMessage(R.string.power_reboot_bootloader_confirm)
 					.setNegativeButton(R.string.yes,
 							new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,

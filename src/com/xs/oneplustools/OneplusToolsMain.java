@@ -61,7 +61,7 @@ public class OneplusToolsMain extends ActivityGroup {
 	public void onStart() {
 		super.onStart();
 		if (!this.A0001.equals("A0001")) {
-			Toast.makeText(this, "您的手机不是一加手机，程序即将退出", Toast.LENGTH_SHORT)
+			Toast.makeText(this, R.string.a0001, Toast.LENGTH_SHORT)
 			.show();
 			finish();
 		}
@@ -75,42 +75,42 @@ public class OneplusToolsMain extends ActivityGroup {
 		// 关于
 		mTabHost.addTab(mTabHost
 				.newTabSpec("tab_about")
-				.setIndicator("关于",
+				.setIndicator(getResources().getString(R.string.tab_about),
 						getResources().getDrawable(R.drawable.ic_launcher))
 				.setContent(new Intent(this, AboutActivity.class)));
 
 		// 电源
 		mTabHost.addTab(mTabHost
 				.newTabSpec("tab_power")
-				.setIndicator("电源",
+				.setIndicator(getResources().getString(R.string.tab_power),
 						getResources().getDrawable(R.drawable.ic_launcher))
 				.setContent(new Intent(this, PowerActivity.class)));
 
 		// 声音
 		mTabHost.addTab(mTabHost
 				.newTabSpec("tab_sound")
-				.setIndicator("声音",
+				.setIndicator(getResources().getString(R.string.tab_sound),
 						getResources().getDrawable(R.drawable.ic_launcher))
 				.setContent(new Intent(this, SoundActivity.class)));
 
 		// 网络
 		mTabHost.addTab(mTabHost
 				.newTabSpec("tab_modem")
-				.setIndicator("网络",
+				.setIndicator(getResources().getString(R.string.tab_modem),
 						getResources().getDrawable(R.drawable.ic_launcher))
 				.setContent(new Intent(this, ModemActivity.class)));
 
 		// 刷机
 		mTabHost.addTab(mTabHost
 				.newTabSpec("tab_flash")
-				.setIndicator("刷机",
+				.setIndicator(getResources().getString(R.string.tab_flash),
 						getResources().getDrawable(R.drawable.ic_launcher))
 				.setContent(new Intent(this, FlashRomActivity.class)));
 		
 		//手势
 		mTabHost.addTab(mTabHost
 				.newTabSpec("tab_gesture")
-				.setIndicator("手势",
+				.setIndicator(getResources().getString(R.string.tab_gesture),
 						getResources().getDrawable(R.drawable.ic_launcher))
 				.setContent(new Intent(this, GestureActivity.class)));
 

@@ -57,7 +57,7 @@ public class FlashRomActivity extends PreferenceActivity {
 		if (preference == mFlashBackupBoot) {
 			new AlertDialog.Builder(FlashRomActivity.this)
 					.setTitle(R.string.confirm)
-					.setMessage("您确定备份当前内核？(将会备份到SD卡的OneplusTools/Backup目录中)")
+					.setMessage(R.string.flash_backup_boot_confirm)
 					.setNegativeButton(R.string.yes,
 							new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,
@@ -76,7 +76,7 @@ public class FlashRomActivity extends PreferenceActivity {
 		if (preference == mFlashBackupModem) {
 			new AlertDialog.Builder(FlashRomActivity.this)
 					.setTitle(R.string.confirm)
-					.setMessage("您确定备份当前基带？(将会备份到SD卡的OneplusTools/Backup目录中)")
+					.setMessage(R.string.flash_backup_modem_confirm)
 					.setNegativeButton(R.string.yes,
 							new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,
@@ -95,8 +95,7 @@ public class FlashRomActivity extends PreferenceActivity {
 		if (preference == mFlashBackupRecovery) {
 			new AlertDialog.Builder(FlashRomActivity.this)
 					.setTitle(R.string.confirm)
-					.setMessage(
-							"您确定备份当前Recovery？(将会备份到SD卡的OneplusTools/Backup目录中)")
+					.setMessage(R.string.flash_backup_recovery_confirm)
 					.setNegativeButton(R.string.yes,
 							new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,
@@ -115,8 +114,7 @@ public class FlashRomActivity extends PreferenceActivity {
 		if (preference == mFlashOtherRecovery) {
 			new AlertDialog.Builder(FlashRomActivity.this)
 					.setTitle(R.string.confirm)
-					.setMessage(
-							"您确定刷入第三方Recovery？(请确认您已将需要刷入的Recovery改名为recovery.img并放置在SD卡的OneplusTools/Flash目录中)")
+					.setMessage(R.string.flash_other_recovery_confirm)
 					.setNegativeButton(R.string.yes,
 							new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,
@@ -129,7 +127,7 @@ public class FlashRomActivity extends PreferenceActivity {
 		if (preference == mFlashColorRecovery) {
 			new AlertDialog.Builder(FlashRomActivity.this)
 					.setTitle(R.string.confirm)
-					.setMessage("您确定刷入官方Recovery？")
+					.setMessage(R.string.flash_color_recovery_confirm)
 					.setNegativeButton(R.string.yes,
 							new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,
@@ -142,8 +140,7 @@ public class FlashRomActivity extends PreferenceActivity {
 		if (preference == mFlashBoot) {
 			new AlertDialog.Builder(FlashRomActivity.this)
 					.setTitle(R.string.confirm)
-					.setMessage(
-							"您确定刷入内核？(请确认您已将需要刷入的内核改名为boot.img并放置在SD卡的OneplusTools/Flash目录中)")
+					.setMessage(R.string.flash_boot_confirm)
 					.setNegativeButton(R.string.yes,
 							new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,

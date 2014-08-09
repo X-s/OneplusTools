@@ -47,14 +47,14 @@ public class AboutActivity extends PreferenceActivity {
 			    public void onUpdateReturned(int updateStatus,UpdateResponse updateInfo) {
 			        switch (updateStatus) {
 			        case UpdateStatus.Yes:
-			        	Toast.makeText(getApplicationContext(), "检查到新版本", Toast.LENGTH_SHORT).show();
+			        	Toast.makeText(getApplicationContext(), R.string.check_for_update_yes, Toast.LENGTH_SHORT).show();
 			            UmengUpdateAgent.showUpdateDialog(getApplicationContext(), updateInfo);
 			            break;
 			        case UpdateStatus.No:
-			            Toast.makeText(getApplicationContext(), "没有检查到更新", Toast.LENGTH_SHORT).show();
+			            Toast.makeText(getApplicationContext(), R.string.check_for_update_no, Toast.LENGTH_SHORT).show();
 			            break;
 			        case UpdateStatus.Timeout:
-			            Toast.makeText(getApplicationContext(), "网络超时", Toast.LENGTH_SHORT).show();
+			            Toast.makeText(getApplicationContext(), R.string.check_for_update_timeout, Toast.LENGTH_SHORT).show();
 			            break;
 			        }
 			    }

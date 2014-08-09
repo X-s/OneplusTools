@@ -42,7 +42,7 @@ public class ModemActivity extends PreferenceActivity {
 		if (preference == mFlashChinaMobile) {
 			new AlertDialog.Builder(ModemActivity.this)
 					.setTitle(R.string.confirm)
-					.setMessage("您确定刷入移动信号基带么，这将会重启手机？")
+					.setMessage(R.string.flash_chinamobile_confirm)
 					.setNegativeButton(R.string.yes,
 							new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,
@@ -56,7 +56,7 @@ public class ModemActivity extends PreferenceActivity {
 		if (preference == mFlashChinaUnicom) {
 			new AlertDialog.Builder(ModemActivity.this)
 					.setTitle(R.string.confirm)
-					.setMessage("您确定刷入联通信号基带么，这将会重启手机？")
+					.setMessage(R.string.flash_chinaunicom_confirm)
 					.setNegativeButton(R.string.yes,
 							new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,
