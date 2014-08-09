@@ -11,12 +11,12 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
-import android.util.Log;
 import android.widget.Toast;
 
 public class AboutActivity extends PreferenceActivity {
 	
 	private static final String CHECKFORUPDATE = "check_for_update";
+	
 	
 	private Preference mCheckForUpdate;
 
@@ -31,6 +31,7 @@ public class AboutActivity extends PreferenceActivity {
 		super.onResume();
 		MobclickAgent.onResume(this);
 	}
+	
 	public void onPause() {
 		super.onPause();
 		MobclickAgent.onPause(this);

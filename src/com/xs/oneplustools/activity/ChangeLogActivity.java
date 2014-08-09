@@ -4,9 +4,7 @@ import com.umeng.analytics.MobclickAgent;
 import com.xs.oneplustools.R;
 
 import android.os.Bundle;
-import android.preference.Preference;
 import android.preference.PreferenceActivity;
-import android.preference.PreferenceScreen;
 
 public class ChangeLogActivity extends PreferenceActivity {
 

@@ -16,6 +16,7 @@ import android.app.ActivityGroup;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.preference.PreferenceManager;
 import android.widget.TabHost;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ import android.widget.Toast;
 //该类需要继承ActivityGroup
 public class OneplusToolsMain extends ActivityGroup {
 	private TabHost mTabHost;
+	private static final String A0001 = SystemProperties.get("ro.build.product");
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -54,6 +56,15 @@ public class OneplusToolsMain extends ActivityGroup {
 
 		// 设置TabHost
 		initTabs();
+	}
+	
+	public void onStart() {
+		super.onStart();
+		if (!this.A0001.equals("A0001")) {
+			Toast.makeText(this, "您的手机不是一加手机，程序即将退出", Toast.LENGTH_SHORT)
+			.show();
+			finish();
+		}
 	}
 
 	// 设置Tab列表

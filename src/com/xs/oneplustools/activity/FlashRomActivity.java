@@ -1,6 +1,5 @@
 package com.xs.oneplustools.activity;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import com.umeng.analytics.MobclickAgent;
