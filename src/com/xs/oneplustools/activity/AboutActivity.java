@@ -11,7 +11,7 @@ public class AboutActivity extends PreferenceActivity {
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		addPreferencesFromResource(R.xml.about);
+		addPreferencesFromResource(R.xml.activity_about);
 	}
 
 }

@@ -25,7 +25,7 @@ public class PowerActivity extends PreferenceActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		addPreferencesFromResource(R.xml.power);
+		addPreferencesFromResource(R.xml.activity_power);
 
 		mPowerShutdown = (Preference) findPreference(POWER_SHUTDOWN);
 		mPowerReboot = (Preference) findPreference(POWER_REBOOT);

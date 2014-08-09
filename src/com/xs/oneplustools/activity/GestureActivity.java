@@ -26,7 +26,7 @@ public class GestureActivity extends PreferenceActivity {
 	
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
-		addPreferencesFromResource(R.xml.gesture);
+		addPreferencesFromResource(R.xml.activity_gesture);
 		
 		mDoubleTapToWake = (CheckBoxPreference) findPreference(DOUBLE_TAP_TO_WAKE);
 		mCameraGesture = (CheckBoxPreference) findPreference(CAMERA_GESTURE);

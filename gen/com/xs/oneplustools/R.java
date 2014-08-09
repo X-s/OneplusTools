@@ -98,12 +98,11 @@ public final class R {
         public static final int yes=0x7f06000c;
     }
     public static final class xml {
-        public static final int about=0x7f040000;
-        public static final int flashrom=0x7f040001;
-        public static final int gesture=0x7f040002;
-        public static final int modem=0x7f040003;
-        public static final int oneplustools=0x7f040004;
-        public static final int power=0x7f040005;
-        public static final int sound=0x7f040006;
+        public static final int activity_about=0x7f040000;
+        public static final int activity_flashrom=0x7f040001;
+        public static final int activity_gesture=0x7f040002;
+        public static final int activity_modem=0x7f040003;
+        public static final int activity_power=0x7f040004;
+        public static final int activity_sound=0x7f040005;
     }
 }

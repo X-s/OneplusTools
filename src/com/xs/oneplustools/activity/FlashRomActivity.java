@@ -32,7 +32,7 @@ public class FlashRomActivity extends PreferenceActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		addPreferencesFromResource(R.xml.flashrom);
+		addPreferencesFromResource(R.xml.activity_flashrom);
 
 		mFlashColorRecovery = (Preference) findPreference(FLASH_COLOR_RECOVERY);
 		mFlashOtherRecovery = (Preference) findPreference(FLASH_OTHER_RECOVERY);

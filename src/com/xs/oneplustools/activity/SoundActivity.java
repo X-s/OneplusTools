@@ -24,7 +24,7 @@ public class SoundActivity extends PreferenceActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		addPreferencesFromResource(R.xml.sound);
+		addPreferencesFromResource(R.xml.activity_sound);
 
 		mCameraSound = (CheckBoxPreference) findPreference(KEY_CAMERA_SOUND);
 		mRecordSound = (CheckBoxPreference) findPreference(KEY_RECORD_SOUND);

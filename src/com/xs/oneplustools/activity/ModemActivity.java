@@ -21,7 +21,7 @@ public class ModemActivity extends PreferenceActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		addPreferencesFromResource(R.xml.modem);
+		addPreferencesFromResource(R.xml.activity_modem);
 		mFlashChinaMobile = (Preference) findPreference(FLASH_CHINAMOBILE);
 		mFlashChinaUnicom = (Preference) findPreference(FLASH_CHINAUNICOM);
 	}
