@@ -1,5 +1,6 @@
 package com.xs.oneplustools.activity;
 
+import com.umeng.analytics.MobclickAgent;
 import com.xs.oneplustools.R;
 import com.xs.oneplustools.tools.RootCmd;
 
@@ -22,13 +23,22 @@ public class SoundActivity extends PreferenceActivity {
 	private CheckBoxPreference mRecordSound;
 	private CheckBoxPreference mFocusSound;
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.activity_sound);
 
 		mCameraSound = (CheckBoxPreference) findPreference(KEY_CAMERA_SOUND);
 		mRecordSound = (CheckBoxPreference) findPreference(KEY_RECORD_SOUND);
 		mFocusSound = (CheckBoxPreference) findPreference(KEY_FOCUS_SOUND);
+	}
+	
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onResume(this);
+	}
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPause(this);
 	}
 
 	public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,

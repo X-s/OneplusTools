@@ -69,5 +69,6 @@
     <string name="music_gesture">双竖线播放/暂停音乐</string>
     <string name="music_gesture_summary_off">已关闭！</string>
     <string name="music_gesture_summary_on">已开启！</string>
+    <string name="check_for_update">检查更新</string>
 
 </resources>

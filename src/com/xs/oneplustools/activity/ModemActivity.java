@@ -1,5 +1,6 @@
 package com.xs.oneplustools.activity;
 
+import com.umeng.analytics.MobclickAgent;
 import com.xs.oneplustools.R;
 import com.xs.oneplustools.tools.FlashRom;
 
@@ -24,6 +25,15 @@ public class ModemActivity extends PreferenceActivity {
 		addPreferencesFromResource(R.xml.activity_modem);
 		mFlashChinaMobile = (Preference) findPreference(FLASH_CHINAMOBILE);
 		mFlashChinaUnicom = (Preference) findPreference(FLASH_CHINAUNICOM);
+	}
+	
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onResume(this);
+	}
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPause(this);
 	}
 
 	public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,

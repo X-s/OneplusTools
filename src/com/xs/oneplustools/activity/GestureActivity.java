@@ -1,5 +1,6 @@
 package com.xs.oneplustools.activity;
 
+import com.umeng.analytics.MobclickAgent;
 import com.xs.oneplustools.R;
 import com.xs.oneplustools.tools.RootCmd;
 
@@ -31,6 +32,15 @@ public class GestureActivity extends PreferenceActivity {
 		mDoubleTapToWake = (CheckBoxPreference) findPreference(DOUBLE_TAP_TO_WAKE);
 		mCameraGesture = (CheckBoxPreference) findPreference(CAMERA_GESTURE);
 		mMusicGesture = (CheckBoxPreference) findPreference(MUSIC_GESTURE);
+	}
+	
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onResume(this);
+	}
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPause(this);
 	}
 	
 	public boolean onPreferenceTreeClick(PreferenceScreen preferencescreen,Preference preference){

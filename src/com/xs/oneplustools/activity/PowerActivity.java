@@ -1,5 +1,6 @@
 package com.xs.oneplustools.activity;
 
+import com.umeng.analytics.MobclickAgent;
 import com.xs.oneplustools.R;
 import com.xs.oneplustools.tools.RootCmd;
 
@@ -32,6 +33,15 @@ public class PowerActivity extends PreferenceActivity {
 		mPowerRebootRecovery = (Preference) findPreference(POWER_REBOOT_RECOVERY);
 		mPowerRebootBootloader = (Preference) findPreference(POWER_REBOOT_BOOTLOADER);
 
+	}
+	
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onResume(this);
+	}
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPause(this);
 	}
 
 	public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,

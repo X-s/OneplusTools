@@ -2,6 +2,8 @@ package com.xs.oneplustools.activity;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import com.umeng.analytics.MobclickAgent;
 import com.xs.oneplustools.R;
 import com.xs.oneplustools.tools.RootCmd;
 
@@ -40,6 +42,15 @@ public class FlashRomActivity extends PreferenceActivity {
 		mFlashBackupModem = (Preference) findPreference(FLASH_BACKUP_MODEM);
 		mFlashBackupBoot = (Preference) findPreference(FLASH_BACKUP_BOOT);
 		mFlashBoot = (Preference) findPreference(FLASH_BOOT);
+	}
+	
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onResume(this);
+	}
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPause(this);
 	}
 
 	public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,

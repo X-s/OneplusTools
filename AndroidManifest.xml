@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" ></uses-permission>
     <uses-permission android:name="android.permission.INTERNET" ></uses-permission>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" ></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
 
     <uses-sdk
         android:minSdkVersion="17"
@@ -20,7 +21,20 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
-        
+
+        <!-- Umeng -->
+        <meta-data android:name="UMENG_APPKEY" android:value="53e4e689fd98c5e0e1011109" />
+        <meta-data android:name="UMENG_CHANNEL" android:value="OneplusTools" />
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- End -->
+
         <!-- 程序启动时首屏 -->
         <activity
             android:name=".PowerOnStart"
@@ -29,12 +43,13 @@
             android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+
         <!-- 主界面 -->
-        <activity
+        <activity 
             android:name=".OneplusToolsMain" >
         </activity>
         
@@ -43,33 +58,32 @@
         </activity>
         
         <activity 
-            android:name=".activity.ModemActivity">
+            android:name=".activity.ModemActivity" >
         </activity>
         
-        <activity
-            android:name=".activity.FlashRomActivity">
+        <activity 
+            android:name=".activity.FlashRomActivity" >
         </activity>
         
-        <activity
-            android:name=".activity.SoundActivity">
+        <activity 
+            android:name=".activity.SoundActivity" >
         </activity>
         
-        <activity
-            android:name=".activity.AboutActivity">
+        <activity 
+            android:name=".activity.AboutActivity" >
         </activity>
         
-        <activity
-            android:name=".activity.GestureActivity">
+        <activity 
+            android:name=".activity.GestureActivity" >
         </activity>
         
-        <activity
-            android:name=".activity.ChangeLogActivity">
+        <activity 
+            android:name=".activity.ChangeLogActivity" >
         </activity>
-        
+
         <!-- 系统开机时恢复手势数据 -->
-        <receiver
-            android:name=".RestoreGesture">
-            <intent-filter android:priority = "0" >
+        <receiver android:name=".RestoreGesture" >
+            <intent-filter android:priority="0" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>

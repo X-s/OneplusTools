@@ -16,6 +16,10 @@
             android:targetClass="com.xs.oneplustools.activity.ChangeLogActivity" ></intent>
     </PreferenceScreen>
     <PreferenceScreen
+        android:key="check_for_update"
+        android:title="@string/check_for_update">
+    </PreferenceScreen>
+    <PreferenceScreen
         android:enabled="false"
         android:summary="@string/qq_group_summary"
         android:title="@string/qq_group" >
