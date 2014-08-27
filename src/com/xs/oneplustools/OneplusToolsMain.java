@@ -3,14 +3,8 @@ package com.xs.oneplustools;
 import java.io.IOException;
 
 import com.xs.oneplustools.R;
-import com.xs.oneplustools.activity.AboutActivity;
-import com.xs.oneplustools.activity.FlashRomActivity;
-import com.xs.oneplustools.activity.GestureActivity;
-import com.xs.oneplustools.activity.ModemActivity;
-import com.xs.oneplustools.activity.PowerActivity;
-import com.xs.oneplustools.activity.SoundActivity;
-import com.xs.oneplustools.tools.AssetCopyer;
-import com.xs.oneplustools.tools.RootCmd;
+import com.xs.oneplustools.activity.*;
+import com.xs.oneplustools.tools.*;
 
 import android.app.ActivityGroup;
 import android.content.Intent;
@@ -46,9 +40,7 @@ public class OneplusToolsMain extends ActivityGroup {
 		}
 
 		// 创建程序目录
-		RootCmd.RunRootCmd("mkdir /sdcard/OneplusTools/");
-		RootCmd.RunRootCmd("mkdir /sdcard/OneplusTools/Backup/");
-		RootCmd.RunRootCmd("mkdir /sdcard/OneplusTools/Flash/");
+		CreateDir.Mkdir();
 
 		// 设置TabHost
 		initTabs();
