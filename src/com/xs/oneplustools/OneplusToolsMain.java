@@ -36,10 +36,6 @@ public class OneplusToolsMain extends ActivityGroup {
 		// 布局
 		setContentView(R.layout.activity_tab_host);
 
-		// 欢迎
-		Toast.makeText(getApplicationContext(), R.string.welcome,
-				Toast.LENGTH_SHORT).show();
-
 		// 在程序启动时复制数据到SD卡
 		AssetCopyer asset = new AssetCopyer(getBaseContext());
 		try {
@@ -61,9 +57,11 @@ public class OneplusToolsMain extends ActivityGroup {
 	public void onStart() {
 		super.onStart();
 		if (!this.A0001.equals("A0001")) {
-			Toast.makeText(this, R.string.a0001, Toast.LENGTH_SHORT)
-			.show();
+			Toast.makeText(this, R.string.a0001, 2000).show();
 			finish();
+		}
+		else {
+			Toast.makeText(this, R.string.welcome, 2000).show();
 		}
 	}
 
