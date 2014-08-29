@@ -13,18 +13,10 @@ import android.preference.PreferenceScreen;
 
 public class ModemActivity extends PreferenceActivity {
 
-	private static final String FLASH_CHINAMOBILE = "flash_chinamobile";
-	private static final String FLASH_CHINAUNICOM = "flash_chinaunicom";
-
-	private Preference mFlashChinaMobile;
-	private Preference mFlashChinaUnicom;
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.activity_modem);
-		mFlashChinaMobile = (Preference) findPreference(FLASH_CHINAMOBILE);
-		mFlashChinaUnicom = (Preference) findPreference(FLASH_CHINAUNICOM);
 	}
 	
 	public void onResume() {
@@ -38,36 +30,7 @@ public class ModemActivity extends PreferenceActivity {
 
 	public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
 			Preference preference) {
-
-		if (preference == mFlashChinaMobile) {
-			new AlertDialog.Builder(ModemActivity.this)
-					.setTitle(R.string.confirm)
-					.setMessage(R.string.flash_chinamobile_confirm)
-					.setNegativeButton(R.string.yes,
-							new DialogInterface.OnClickListener() {
-								public void onClick(DialogInterface dialog,
-										int whichButton) {
-									FlashRom.InstallZip(
-											getApplicationContext(),
-											"/sdcard/Android/data/com.xs.oneplustools/files/Oneplus One ChinaMobile.zip");
-								}
-							}).setPositiveButton(R.string.no, null).show();
-		}
-		if (preference == mFlashChinaUnicom) {
-			new AlertDialog.Builder(ModemActivity.this)
-					.setTitle(R.string.confirm)
-					.setMessage(R.string.flash_chinaunicom_confirm)
-					.setNegativeButton(R.string.yes,
-							new DialogInterface.OnClickListener() {
-								public void onClick(DialogInterface dialog,
-										int whichButton) {
-									FlashRom.InstallZip(
-											getApplicationContext(),
-											"/sdcard/Android/data/com.xs.oneplustools/files/Oneplus One ChinaUnicom.zip");
-								}
-							}).setPositiveButton(R.string.no, null).show();
-		}
+		
 		return false;
-
 	}
 }

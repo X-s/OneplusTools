@@ -3,12 +3,6 @@
 
     <string name="app_name">一加手机工具箱</string>
     <string name="modem">网络</string>
-    <string name="flash_chinaunicom">刷入联通基带</string>
-    <string name="flash_chinaunicom_summary">支持联通2G/3G/4G</string>
-    <string name="flash_chinaunicom_confirm">您确定刷入联通信号基带么，这将会重启手机？</string>
-    <string name="flash_chinamobile">刷入移动基带</string>
-    <string name="flash_chinamobile_summary">支持移动2G/3G/4G</string>
-    <string name="flash_chinamobile_confirm">您确定刷入移动信号基带么，这将会重启手机？</string>
     <string name="modem_settings">信号选择</string>
     <string name="modem_settings_summary">设置首选网络类型</string>
     <string name="about">程序信息</string>

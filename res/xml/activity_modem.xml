@@ -10,16 +10,6 @@
                 android:targetClass="com.android.settings.RadioInfo"
                 android:targetPackage="com.android.settings" />
         </PreferenceScreen>
-        <PreferenceScreen
-            android:key="flash_chinamobile"
-            android:summary="@string/flash_chinamobile_summary"
-            android:title="@string/flash_chinamobile" >
-        </PreferenceScreen>
-        <PreferenceScreen
-            android:key="flash_chinaunicom"
-            android:summary="@string/flash_chinaunicom_summary"
-            android:title="@string/flash_chinaunicom" >
-        </PreferenceScreen>
     </PreferenceCategory>
 
 </PreferenceScreen>

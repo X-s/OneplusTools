@@ -3,12 +3,6 @@
 
     <string name="app_name">Oneplus Tools</string>
     <string name="modem">Modem</string>
-    <string name="flash_chinaunicom">Flash China Unicom</string>
-    <string name="flash_chinaunicom_summary"></string>
-    <string name="flash_chinaunicom_confirm">Are you sure you flash ChinaUnicom Modem?</string>
-    <string name="flash_chinamobile">Flash China Mobile</string>
-    <string name="flash_chinamobile_summary"></string>
-    <string name="flash_chinamobile_confirm">Are you sure you flash ChinaMobile Modem?</string>
     <string name="modem_settings">Modem Settings</string>
     <string name="modem_settings_summary"></string>
     <string name="about">About</string>
