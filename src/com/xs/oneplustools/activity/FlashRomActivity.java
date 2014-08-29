@@ -85,7 +85,7 @@ public class FlashRomActivity extends PreferenceActivity {
 									Date date = new Date(System
 											.currentTimeMillis());
 									RootCmd.RunRootCmd("dd if=/dev/block/platform/msm_sdcc.1/by-name/modem of=/sdcard/OneplusTools/Backup/'"
-											+ date + "'+modem.img");
+											+ date + "'+modem.bin");
 									Toast.makeText(getApplicationContext(),
 											R.string.flash_backup_ok,
 											Toast.LENGTH_SHORT).show();
