@@ -10,6 +10,14 @@
                 android:targetClass="com.android.settings.RadioInfo"
                 android:targetPackage="com.android.settings" />
         </PreferenceScreen>
+        <PreferenceScreen
+            android:summary="@string/modem_dual_summary"
+            android:title="@string/modem_dual" >
+            <intent
+            android:targetClass="com.xs.oneplustools.activity.ModemDual4GActivity"
+            android:targetPackage="com.xs.oneplustools" />
+            
+        </PreferenceScreen>
     </PreferenceCategory>
 
 </PreferenceScreen>

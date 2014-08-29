@@ -81,6 +81,10 @@
         <activity 
             android:name=".activity.ChangeLogActivity" >
         </activity>
+        
+        <activity 
+            android:name=".activity.ModemDual4GActivity">
+        </activity>
 
         <!-- 系统开机时恢复手势数据 -->
         <receiver android:name=".RestoreGesture" >

@@ -5,6 +5,8 @@
     <string name="modem">网络</string>
     <string name="modem_settings">信号选择</string>
     <string name="modem_settings_summary">设置首选网络类型</string>
+    <string name="modem_dual">双网4G</string>
+    <string name="modem_dual_summary">点击查看双网4G教程</string>
     <string name="about">程序信息</string>
     <string name="version">一加手机工具箱 1.4</string>
     <string name="version_summary">© Oneplus Tools | Powered by Xs</string>

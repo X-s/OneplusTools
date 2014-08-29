@@ -5,6 +5,8 @@
     <string name="modem">Modem</string>
     <string name="modem_settings">Modem Settings</string>
     <string name="modem_settings_summary"></string>
+    <string name="modem_dual">Dual 4G</string>
+    <string name="modem_dual_summary"></string>
     <string name="about">About</string>
     <string name="version">Oneplus Tools 1.4</string>
     <string name="version_summary">© Oneplus Tools | Powered by Xs</string>

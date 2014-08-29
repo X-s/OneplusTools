@@ -1,0 +1,58 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="vertical"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:text="双网（移动联通）4G教程"
+            android:textColor="@color/text_warning"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="作者：XS（weibo.com/acexs）\n原作者：一加社区玩机组众大神，再次感谢" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="\n准备工作:\n1：一部已经解锁的一加手机\n2：一个Color OS的ZIP刷机包（确保是最新版本）\n3：官方破解补丁（http://pan.baidu.com/s/1c0lHw1y）" />
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="\n教程开始:\n1：将Color OS刷机包放置在手机内置存储上，然后重启进入Recovery模式（刷机模式），双清并刷入Color OS刷机包。如果你的手机已经是最新的Color OS，那么可以跳过此步骤\n2：确认手机已经是最新的Color OS，然后继续重启Recovery模式，选择刷入ZIP包，找到刚才下载的破解补丁，刷入重启（无需双清）\n3：开机后查看网络是否正常支持即可，官方破解完成\n4：现在你的一加手机已经支持双网4G，以后刷机时不要刷入基带文件即可保证双4G稳定使用" />
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="\n关于基带文件说明：\n1：基带文件一般名称为NON-HLOS.bin\n2：基带文件一般包含在ZIP刷机包中一起刷入（刷机前查看下ZIP包是否包含基带，如果包含则要慎重刷入）\n3：部分ROM如果写明支持双网则可以放心刷入，但是本人不为此行为所带来的一切后果承担任何责任！" />>
+    </LinearLayout>
+
+</ScrollView>

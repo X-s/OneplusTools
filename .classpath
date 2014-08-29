@@ -5,8 +5,8 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="lib" path="C:/Users/XS/Desktop/adt-bundle-windows-x86_64-20140702/Workspace/OneplusTools/libs/layoutlib.jar"/>
-	<classpathentry kind="lib" path="C:/Users/XS/Desktop/adt-bundle-windows-x86_64-20140702/Workspace/OneplusTools/libs/umeng-update-v2.4.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/XS/Desktop/adt-bundle-windows-x86_64-20140702/Workspace/OneplusTools/libs/umeng-analytics-v5.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HK/Desktop/oneplustools/libs/layoutlib.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HK/Desktop/oneplustools/libs/umeng-update-v2.4.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HK/Desktop/oneplustools/libs/umeng-analytics-v5.2.4.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
